@@ -1,3 +1,4 @@
+'use client'
 import Head from 'next/head'
 import Benefits from '../blocks/Benefits';
 import Break from '../blocks/Break';
@@ -19,73 +20,72 @@ const LOREM = `
 
 export default function Home() {
   return (
-    <div>
+    <div style={{overflow: 'hidden'}}>
       <Head>
         <title>{Global.product}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Notice id="subscribed">Thank you for subscribing</Notice>
-      <Header id="top" title={Global.product}/>
-
+        <div data-aos="fade-down"  data-aos-delay="200">
+      <Header  id="top" title={Global.product} />
+        </div>
       <main>
-        <Hero
-          title="Clear headline that explains your product’s benefit"
-          subtitle="Explain your unique solution, how it solves your customer's problem."
-          illustration=""
-          subscribePlaceholder="you@email.com"
-          subscribeAction="When is it ready?"
+          <Hero
+          title="The first pudge meme on blockchain TON and the cryptocurrence!!!"
+          subtitle="This pudge wiil hook your TON and make you rich"
+          illustration="/pudge-transparent.gif"
         />
 
-        <Benefits
+          <Benefits
           background="alternate"
-          title="Headline that describes how your product solves the problem"
-          subtitle="Start by defining the pain your customer has right now, for example: clients not paying their invoices. Then write how your solution solves this problem for your customers."
+          title="Pudge got tired of existing in Dota2, so he became CRYPTO PUDGE to conquer the TON ecosystem!"
+          subtitle="A brief history of our CRYPTO PUDGE "
           benefits={[
-            {illustration:'', title:'Main benefit of your product', text:'Brief explanation of why and how this benefit will help your customers'},
-            {illustration:'', title:'Main benefit of your product', text:'Brief explanation of why and how this benefit will help your customers'},
-            {illustration:'', title:'Main benefit of your product', text:'Brief explanation of why and how this benefit will help your customers'},
+            {illustration:'/logo.png', title:'Pudge turned to crypto enthusiasts to send him to TON ', text:''},
+            {illustration:'/pud-walk.gif', title:'Pudge turns into CRYPTO PUDGE', text:''},
+            {illustration:'/main.png', title:'Pudge conquers TON and flies TO THE MOON', text:''},
           ]}
         />
-
+        <div  data-aos="fade-up"  data-aos-delay="200">
         <Break
-          title="Risk Reduction: Try Product free for 14 days"
-          subtitle="This is an in-betwen CTA for visitors that already got convinced."
+          title=""
+          subtitle=""
           illustration=""
-          action="When is it ready?"
-          onActionClick={() => window.scrollTo({top:99999, behavior:'smooth'})}
+          action=""
         />
+        </div>
 
         <Highlights
-          title="Highlights of your product"
-          subtitle="Explain why your solution deserves attention"
+          title="Roadmap CRYPTO PUDGE"
+          subtitle="(he dismembered pudge)"
           highlights={[
-            {illustration:'', title:'Now go deeper into what your product offers. Word it as benefits, not as features', text:'“Save your favorite links” is a feature. “Never lose your favorite websites again” is a benefit. Users don’t care about your product, they only care about what’s in it for them.'},
-            {illustration:'', title:'Now go deeper into what your product offers. Word it as benefits, not as features', text:'“Save your favorite links” is a feature. “Never lose your favorite websites again” is a benefit. Users don’t care about your product, they only care about what’s in it for them.'},
-            {illustration:'', title:'Now go deeper into what your product offers. Word it as benefits, not as features', text:'“Save your favorite links” is a feature. “Never lose your favorite websites again” is a benefit. Users don’t care about your product, they only care about what’s in it for them.'},
+            {illustration:'/pud-winner.webp', title:'Launch $pudge ', text:''},
+            {illustration:'/main.png', title:'DeDust pool LSEPlisting in Coinmarketcap and coingecko', text:''},
+              {illustration:'/pud-han.gif', title:'CEX', text:''},
           ]}
         />
+
 
         <Features
           background="alternate"
-          title="But wait, there is more"
-          subtitle="Describe the full extent of your product"
+          title="How Crypto Pudge will hook its Customers"
+          subtitle=""
           features={[
-            {illustration:'', title:'Product feature', text:'Brief explanation of why and how this feature will help your customers'},
-            {illustration:'', title:'Product feature', text:'Brief explanation of why and how this feature will help your customers'},
-            {illustration:'', title:'Product feature', text:'Brief explanation of why and how this feature will help your customers'},
-            {illustration:'', title:'Product feature', text:'Brief explanation of why and how this feature will help your customers'},
-            {illustration:'', title:'Product feature', text:'Brief explanation of why and how this feature will help your customers'},
-            {illustration:'', title:'Product feature', text:'Brief explanation of why and how this feature will help your customers'},
+            {illustration:'/last/airdrop.jpeg', title:'Bonus campaign(airdrops)', text:''},
+            {illustration:'/last/nft.png', title:'NFT-coolection', text:''},
+            {illustration:'/last/game.jpeg', title:'Game', text:''},
+            {illustration:'/last/money.jpeg', title:'Money draws between holders', text:''},
+            {illustration:'/last/marketing.png', title:'Marketing', text:''},
+            {illustration:'/last/investors.webp', title:'With your beautiful face', text:''},
           ]}
         />
 
         <Epilogue
-          title="Ask if your visitor wants to solve problem X today"
-          subtitle="Explain how your solution will solve this problem and ask them to start a free trial, or any other low-key CTA they could take"
-          illustration=""
-          subscribePlaceholder="you@email.com"
-          subscribeAction="When is it ready?"
+          title="Pudge's victory in the TON race is inevitabl"
+          subtitle="You have to either be with him or he will eat you"
+          illustration="/pud-dance.gif"
+
         />
       </main>
 

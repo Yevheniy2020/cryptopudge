@@ -19,12 +19,20 @@ export default function Epilogue(p: {
 
   return (
     <Section id={p.id} className={className} background="accent">
-      <div className={styles.illustration}/>
+      <div  data-aos="flip-up"  data-aos-delay="300">
+
+      <img src={p.illustration} className={styles.illustration} alt={'pudge'}/>
+      </div>
+
+      <div  data-aos="fade-down"  data-aos-delay="200">
+
       <div className={styles.header}>
         <h2 className={styles.title}>{p.title}</h2>
         <div className={styles.subtitle}>{p.subtitle}</div>
         {p.subscribeAction && <SubscribeInput className={styles.subscribe} location="accent" placeholder={p.subscribePlaceholder} action={p.subscribeAction}/>}
       </div>
+      </div>
+
     </Section>
   );
 }

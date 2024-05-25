@@ -1,7 +1,7 @@
 import styles from './Hero.module.css';
 import Section from '../components/Section';
 import cx from '../utils/cx';
-import SubscribeInput from '../components/SubscribeInput';
+import Link from "next/link";
 
 export default function Hero(p: {
   id?: string,
@@ -18,13 +18,25 @@ export default function Hero(p: {
   );
 
   return (
-    <Section id={p.id} className={className}>
-      <div className={styles.header}>
+    <Section id={p.id} className={className} >
+      <img className={styles.illustration} src={p.illustration} alt="main img, pudge hook coin"/>
+        <div data-aos="fade-up"  data-aos-delay="200">
+
+        <div className={styles.header}>
         <h1 className={styles.title}>{p.title}</h1>
         <p className={styles.subtitle}>{p.subtitle}</p>
-        {p.subscribeAction && <SubscribeInput className={styles.subscribe} placeholder={p.subscribePlaceholder} action={p.subscribeAction}/>}
       </div>
-      <div className={styles.illustration}/>
+        <div style={{display: 'flex', gap: '10px', justifyContent: 'center'}}>
+        <Link href='#'>
+          <img src="/socials/telegram.png" alt="telegram" className={styles.social}/>
+        </Link>
+        <Link href='#'>
+          <img src="/socials/x.webp" alt="x" className={styles.social}/>
+        </Link>
+      </div>
+            </div>
+
+
     </Section>
   );
 }

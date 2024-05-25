@@ -41,13 +41,15 @@
 }
 
 .benefit-illustration {
+  width: 100%;
+  object-fit: cover;
   height: 200px;
-  background: #eee;
+  background: transparent;
   border-radius: 8px;
 }
 
 .benefit-content {
-  margin-top: 24px;
+  margin-top: 10px;
 }
 
 .benefit-title {
@@ -56,6 +58,7 @@
   line-height: var(--h3-line-height);
   letter-spacing: var(--h3-letter-spacing);
   margin-bottom: 8px;
+  text-align: center;
 }
 
 .benefit-text {
@@ -75,4 +78,17 @@
   .benefit:last-child {
     margin-right: 0;
   }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: var(--h2-font-size);
+    font-weight: var(--h2-font-weight);
+    line-height: var(--h2-line-height);
+    letter-spacing: var(--h2-letter-spacing);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 21px;
+  }
+
 }

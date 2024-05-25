@@ -29,8 +29,12 @@
 .features {
   list-style: none;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
   margin-bottom: -48px; /* Hack for bottom margin */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
 .feature {
@@ -42,12 +46,15 @@
 .feature-illustration {
   width: 92px;
   height: 92px;
-  background: #eee;
+  object-fit: cover;
+  background: white;
   border-radius: 28px;
+
 }
 
 .feature-content {
   margin-top: 16px;
+
 }
 
 .feature-title {
@@ -56,13 +63,14 @@
   line-height: var(--h3-line-height);
   letter-spacing: var(--h3-letter-spacing);
   margin-bottom: 8px;
+
 }
 
 .feature-text {
   color: var(--text-shade);
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 1000px) {
   .features {
     display: flex;
     align-items: stretch;
@@ -75,4 +83,17 @@
     margin-right: 64px;
     min-width: var(--list-item-max-width);
   }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: var(--h2-font-size);
+    font-weight: var(--h2-font-weight);
+    line-height: var(--h2-line-height);
+    letter-spacing: var(--h2-letter-spacing);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 21px;
+  }
+
 }

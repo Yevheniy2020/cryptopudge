@@ -21,22 +21,37 @@ export default function Highlights(p: {
 
   return (
     <Section id={p.id} className={className} background={p.background}>
+      <div  data-aos="fade-down"  data-aos-delay="200">
       <div className={styles.header}>
         <h2 className={styles.title}>{p.title}</h2>
         <p className={styles.subtitle}>{p.subtitle}</p>
       </div>
+      </div>
 
       <ul className={styles.highlights}>
         {p.highlights.map((item, i) => {
-          return (
-            <li key={i} className={styles.highlight}>
-              <div className={styles['highlight-illustration']}/>
-              <div className={styles['highlight-content']}>
-                <h3 className={styles['highlight-title']}>{item.title}</h3>
-                <p className={styles['highlight-text']}>{item.text}</p>
-              </div>
-            </li>
-          );
+          if(i % 2 == 0) {
+
+            return (
+                <li key={i} className={styles.highlight} data-aos="fade-right">
+                  <img src={item.illustration} className={styles['highlight-illustration']} alt={'pudge'}/>
+                  <div className={styles['highlight-content']}>
+                    <h3 className={styles['highlight-title']}>{item.title}</h3>
+                    <p className={styles['highlight-text']}>{item.text}</p>
+                  </div>
+                </li>
+            );
+          }else{
+            return (
+                <li key={i} className={styles.highlight} data-aos="fade-left">
+                  <img src={item.illustration} className={styles['highlight-illustration']} alt={'pudge'}/>
+                  <div className={styles['highlight-content']}>
+                    <h3 className={styles['highlight-title']}>{item.title}</h3>
+                    <p className={styles['highlight-text']}>{item.text}</p>
+                  </div>
+                </li>
+            );
+          }
         })}
       </ul>
     </Section>
