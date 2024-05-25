@@ -26,14 +26,14 @@ export default function Hero(p: {
         <h1 className={styles.title}>{p.title}</h1>
         <p className={styles.subtitle}>{p.subtitle}</p>
       </div>
-        <div style={{display: 'flex', gap: '10px', justifyContent: 'center'}}>
-        <Link href='#'>
-          <img src="/socials/telegram.png" alt="telegram" className={styles.social}/>
-        </Link>
-        <Link href='#'>
-          <img src="/socials/x.webp" alt="x" className={styles.social}/>
-        </Link>
-      </div>
+      {/*  <div style={{display: 'flex', gap: '10px', justifyContent: 'center'}}>*/}
+      {/*  <Link href='#'>*/}
+      {/*    <img src="/socials/telegram.png" alt="telegram" className={styles.social}/>*/}
+      {/*  </Link>*/}
+      {/*  <Link href='#'>*/}
+      {/*    <img src="/socials/x.webp" alt="x" className={styles.social}/>*/}
+      {/*  </Link>*/}
+      {/*</div>*/}
             </div>
 
 

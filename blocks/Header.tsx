@@ -25,7 +25,7 @@ export default function Header(p: {
            <div className={styles.title} title={p.title}>{p.title}</div>
        </div>
          <div style={{display: 'flex', gap: '10px', justifyContent: 'center'}}>
-             <Link href='#'>
+             <Link href='https://t.me/cryptopudgeTON'>
                  <img src="/socials/telegram.png" alt="telegram" className={styles.social}/>
              </Link>
              <Link href='#'>

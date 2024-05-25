@@ -43,11 +43,11 @@ export default function Home() {
           subtitle="A brief history of our CRYPTO PUDGE "
           benefits={[
             {illustration:'/logo.png', title:'Pudge turned to crypto enthusiasts to send him to TON ', text:''},
-            {illustration:'/pud-walk.gif', title:'Pudge turns into CRYPTO PUDGE', text:''},
-            {illustration:'/main.png', title:'Pudge conquers TON and flies TO THE MOON', text:''},
+            {illustration:'/main.png', title:'Pudge turns into CRYPTO PUDGE', text:''},
+            {illustration:'/pud-walk.gif', title:'Pudge conquers TON and flies TO THE MOON', text:''},
           ]}
         />
-        <div  data-aos="fade-up"  data-aos-delay="200">
+        <div  data-aos="fade-up"  data-aos-delay="200" >
         <Break
           title=""
           subtitle=""
@@ -60,11 +60,19 @@ export default function Home() {
           title="Roadmap CRYPTO PUDGE"
           subtitle="(he dismembered pudge)"
           highlights={[
-            {illustration:'/pud-winner.webp', title:'Launch $pudge ', text:''},
-            {illustration:'/main.png', title:'DeDust pool LSEPlisting in Coinmarketcap and coingecko', text:''},
+            {illustration:'/logo.png', title:'Launch $cryptopudge ', text:''},
+            {illustration:'/main.png', title:'MEX (listing in Coinmarketcap and coingecko)', text:''},
               {illustration:'/pud-han.gif', title:'CEX', text:''},
           ]}
         />
+
+          <div data-aos="fade-up"  data-aos-delay="200" >
+              <div style={{maxWidth: '1000px' ,width: '100%', margin: '0 auto', height: '600px', paddingBottom:'30px'}}>
+              <iframe height="100%" width="100%" id="geckoterminal-embed" title="GeckoTerminal Embed"
+                      src="https://www.geckoterminal.com/ru/ton/pools/EQBF2bOuBURU4v1QXZSluYDZCxSO4ioB25WyBS5XmTbZ8jc8?embed=1&info=0&swaps=1"
+                      frameBorder="0" allow="clipboard-write" allowFullScreen></iframe>
+              </div>
+          </div>
 
 
         <Features
@@ -76,8 +84,6 @@ export default function Home() {
             {illustration:'/last/nft.png', title:'NFT-coolection', text:''},
             {illustration:'/last/game.jpeg', title:'Game', text:''},
             {illustration:'/last/money.jpeg', title:'Money draws between holders', text:''},
-            {illustration:'/last/marketing.png', title:'Marketing', text:''},
-            {illustration:'/last/investors.webp', title:'With your beautiful face', text:''},
           ]}
         />
 

@@ -2,6 +2,7 @@ import styles from './Epilogue.module.css';
 import Section from '../components/Section';
 import cx from '../utils/cx';
 import SubscribeInput from '../components/SubscribeInput';
+import Link from "next/link";
 
 export default function Epilogue(p: {
   id?: string,
@@ -32,6 +33,14 @@ export default function Epilogue(p: {
         {p.subscribeAction && <SubscribeInput className={styles.subscribe} location="accent" placeholder={p.subscribePlaceholder} action={p.subscribeAction}/>}
       </div>
       </div>
+        <div style={{display: 'flex', gap: '10px', justifyContent: 'center',marginTop: '30px'}}>
+            <Link href='https://t.me/cryptopudgeTON'>
+                <img src="/socials/telegram.png" alt="telegram" className={styles.social}/>
+            </Link>
+            <Link href='#'>
+                <img src="/socials/x.webp" alt="x" className={styles.social}/>
+            </Link>
+        </div>
 
     </Section>
   );
